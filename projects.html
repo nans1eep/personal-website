@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="王铄然的财务、数据分析与 AI 实践项目。">
+    <meta name="theme-color" content="#18352d">
+    <title>作品｜王铄然</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body data-page="projects">
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="index.html" aria-label="王铄然个人网站首页">
+          <span class="brand-mark" aria-hidden="true">WS</span><span class="brand-name">王铄然</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          <span class="sr-only">打开导航菜单</span><span></span><span></span>
+        </button>
+        <nav class="primary-nav" id="primary-nav" aria-label="主导航">
+          <a href="index.html">首页</a>
+          <a href="articles.html">文章</a>
+          <a href="projects.html" class="is-active" aria-current="page">作品</a>
+          <a href="about.html">个人简介</a>
+          <a class="nav-contact" href="mailto:1499949277@qq.com">联系我 <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="page-hero projects-hero section-shell">
+        <div class="page-hero-meta reveal">
+          <span>WORK / 03</span>
+          <span>从问题到结果</span>
+        </div>
+        <div class="page-hero-title reveal">
+          <h1>让想法落地，<br><span class="text-accent">让过程可被看见。</span></h1>
+          <p>这里收录财务分析、数据整理和 AI 工具实践，记录从问题、方法到结果的完整过程。</p>
+        </div>
+      </section>
+
+      <section class="projects section-shell" aria-label="项目列表">
+        <article class="project-card project-card-wide reveal" id="project-market">
+          <figure class="project-image">
+            <img src="assets/images/project-market.svg" alt="农特产销售互换平台" width="1200" height="800">
+          </figure>
+          <div class="project-copy">
+            <div class="project-topline">
+              <span>01 / 创新创业</span>
+            </div>
+            <h2>农特产销售互换平台</h2>
+            <p>担任财务负责人，参与成本测算、定价策略、商业计划书财务分析与用户调研。</p>
+            <dl class="project-facts">
+              <div><dt>调研样本</dt><dd>150 份</dd></div>
+              <div><dt>合作农户</dt><dd>3 家</dd></div>
+              <div><dt>交易记录</dt><dd>50+</dd></div>
+            </dl>
+            <button class="project-button" type="button" data-project="market">查看项目详情 <span aria-hidden="true">↗</span></button>
+          </div>
+        </article>
+
+        <article class="project-card reveal" id="project-budget">
+          <figure class="project-image">
+            <img src="assets/images/project-dashboard.svg" alt="校园活动预算数据看板" width="900" height="700">
+          </figure>
+          <div class="project-copy">
+            <div class="project-topline">
+              <span>02 / 数据可视化</span>
+            </div>
+            <h2>校园活动预算分析</h2>
+            <p>把活动经费从流水式记录，重组为可比较、可追踪的预算结构。</p>
+            <button class="project-button" type="button" data-project="budget">查看项目详情 <span aria-hidden="true">↗</span></button>
+          </div>
+        </article>
+
+        <article class="project-card reveal" id="project-ai">
+          <figure class="project-image project-image-dark">
+            <img src="assets/images/project-ai.svg" alt="AI 协作工作流" width="900" height="700">
+          </figure>
+          <div class="project-copy">
+            <div class="project-topline">
+              <span>03 / AI 工作流</span>
+            </div>
+            <h2>个人研究与整理助手</h2>
+            <p>尝试把资料整理、数据检查和表达优化拆成可复用的 AI 协作步骤。</p>
+            <button class="project-button" type="button" data-project="ai">查看项目详情 <span aria-hidden="true">↗</span></button>
+          </div>
+        </article>
+      </section>
+
+      <section class="contact-band">
+        <div class="section-shell contact-inner reveal">
+          <p class="eyebrow">HAVE A PROJECT IN MIND?</p>
+          <h2>下一件值得<br>认真做的事。</h2>
+          <a class="button button-light" href="mailto:1499949277@qq.com">一起聊聊 <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+      <button class="dialog-close" type="button" aria-label="关闭项目详情">×</button>
+      <div class="dialog-content">
+        <p class="eyebrow" id="dialog-kicker">PROJECT DETAIL</p>
+        <h2 id="dialog-title">项目详情</h2>
+        <div id="dialog-body"></div>
+      </div>
+    </dialog>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-grid">
+        <div>
+          <a class="brand brand-footer" href="index.html"><span class="brand-mark">WS</span><span>王铄然</span></a>
+          <p>在财务、数据与 AI 的交汇处，持续学习。</p>
+        </div>
+        <nav aria-label="页脚导航">
+          <a href="articles.html">文章</a><a href="projects.html">作品</a><a href="about.html">个人简介</a><a href="mailto:1499949277@qq.com">邮件</a>
+        </nav>
+      </div>
+      <div class="section-shell footer-bottom">
+        <span>© <span data-current-year>2026</span> 王铄然</span>
+        <span>Designed with clarity, built with care.</span>
+      </div>
+    </footer>
+  </body>
+</html>

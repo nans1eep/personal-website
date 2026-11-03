@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="王铄然的文章写作台。">
+    <meta name="theme-color" content="#18352d">
+    <title>文章写作台｜王铄然</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="articles-data.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="editor.js" defer></script>
+  </head>
+  <body data-page="editor">
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="index.html" aria-label="王铄然个人网站首页">
+          <span class="brand-mark" aria-hidden="true">WS</span>
+          <span class="brand-name">王铄然</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          <span class="sr-only">打开导航菜单</span>
+          <span></span><span></span>
+        </button>
+        <nav class="primary-nav" id="primary-nav" aria-label="主导航">
+          <a href="index.html">首页</a>
+          <a href="articles.html">文章</a>
+          <a href="projects.html">作品</a>
+          <a href="about.html">关于</a>
+          <a class="nav-contact" href="mailto:1499949277@qq.com">联系我 <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="editor-hero section-shell">
+        <p class="eyebrow">WRITING DESK</p>
+        <h1>写下<span class="text-accent">你的文章。</span></h1>
+        <p>在这里整理标题、封面和正文。保存草稿后可在本机预览，导出文章数据后即可用于网站发布。</p>
+      </section>
+
+      <section class="editor-layout section-shell">
+        <form class="editor-form" id="article-form">
+          <div class="editor-form-heading">
+            <div>
+              <p class="eyebrow">ARTICLE EDITOR</p>
+              <h2>文章信息</h2>
+            </div>
+            <span class="editor-local-badge">本地写作</span>
+          </div>
+
+          <div class="field-grid">
+            <label class="field field-wide">
+              <span>文章标题</span>
+              <input name="title" type="text" required maxlength="100" placeholder="输入文章标题">
+            </label>
+            <label class="field">
+              <span>文章分类</span>
+              <select name="category">
+                <option>财务实践</option>
+                <option>数据分析</option>
+                <option>数据表达</option>
+                <option>AI 应用</option>
+                <option>学习记录</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>发布日期</span>
+              <input name="date" type="date" required>
+            </label>
+            <label class="field">
+              <span>阅读时间</span>
+              <input name="readTime" type="text" maxlength="20" placeholder="例如：5 分钟阅读">
+            </label>
+            <label class="field file-field">
+              <span>上传文章文件</span>
+              <input id="article-file" type="file" accept=".md,.txt,text/markdown,text/plain">
+              <small>支持导入 Markdown 或纯文本，第一行标题会写入标题栏</small>
+            </label>
+          </div>
+
+          <label class="field">
+            <span>文章摘要</span>
+            <textarea name="deck" rows="3" maxlength="240" placeholder="用一两句话介绍文章内容"></textarea>
+          </label>
+
+          <label class="field">
+            <span>正文</span>
+            <textarea name="body" rows="18" required placeholder="直接输入正文。使用空行分段，使用“## 小标题”添加章节标题，使用“- ”创建列表。"></textarea>
+          </label>
+
+          <div class="cover-editor">
+            <label class="field file-field">
+              <span>文章封面</span>
+              <input id="cover-file" type="file" accept="image/jpeg,image/png,image/webp">
+              <small>可选，建议使用横版图片；上传后会自动压缩</small>
+            </label>
+            <figure class="cover-preview" id="cover-preview" hidden>
+              <img src="assets/images/article-numbers.svg" alt="当前文章封面预览">
+            </figure>
+          </div>
+
+          <div class="editor-actions">
+            <button class="button button-primary" type="submit">更新预览 <span aria-hidden="true">→</span></button>
+            <button class="editor-secondary-button" id="save-draft" type="button">保存草稿</button>
+            <button class="editor-secondary-button" id="download-data" type="button">下载文章数据</button>
+            <button class="editor-secondary-button" id="write-site-file" type="button">保存到网站文件</button>
+          </div>
+
+          <p class="editor-status" id="editor-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <aside class="editor-preview-panel" aria-labelledby="preview-heading">
+          <div class="preview-panel-heading">
+            <p class="eyebrow">PREVIEW</p>
+            <h2 id="preview-heading">文章预览</h2>
+          </div>
+          <div class="editor-preview" id="editor-preview">
+            <p class="preview-empty">填写文章内容后，点击“更新预览”查看排版效果。</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="editor-guide section-shell">
+        <div>
+          <p class="eyebrow">HOW IT WORKS</p>
+          <h2>从草稿到网站</h2>
+        </div>
+        <ol>
+          <li><span>01</span>填写文章内容；需要时导入准备好的 Markdown 或文本文件。</li>
+          <li><span>02</span>点击“保存草稿”，在本地文章列表中预览；草稿只保存在当前浏览器。</li>
+          <li><span>03</span>点击“保存到网站文件”，选择项目中的 <code>articles-data.js</code>；也可以下载后手动替换该文件。</li>
+          <li><span>04</span>刷新文章页确认内容，然后把更新后的网站文件上传到发布平台。</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-grid">
+        <div>
+          <a class="brand brand-footer" href="index.html"><span class="brand-mark">WS</span><span>王铄然</span></a>
+          <p>在财务、数据与 AI 的交汇处，持续学习。</p>
+        </div>
+        <nav aria-label="页脚导航">
+          <a href="articles.html">文章</a><a href="projects.html">作品</a><a href="about.html">个人简介</a><a href="editor.html">写作台</a>
+        </nav>
+      </div>
+      <div class="section-shell footer-bottom">
+        <span>© <span data-current-year>2026</span> 王铄然</span>
+        <span>Designed with clarity, built with care.</span>
+      </div>
+    </footer>
+  </body>
+</html>

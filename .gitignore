@@ -1,0 +1,13 @@
+# Local preview and QA artifacts
+work/
+outputs/
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Local environment files
+.env
+.env.*
+!.env.example

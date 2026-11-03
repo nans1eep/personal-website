@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#29483e"/>
+      <stop offset="1" stop-color="#17231f"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="700" fill="url(#glow)"/>
+  <g fill="none" stroke="#9fb0a7" stroke-opacity=".26">
+    <circle cx="450" cy="350" r="270"/>
+    <circle cx="450" cy="350" r="190"/>
+    <circle cx="450" cy="350" r="110"/>
+    <path d="M40 350H860M450 40V660M160 90l580 520M740 90L160 610"/>
+  </g>
+  <g fill="#18352d" stroke="#df6740" stroke-width="2">
+    <circle cx="450" cy="240" r="48"/>
+    <circle cx="301" cy="355" r="34"/>
+    <circle cx="576" cy="438" r="42"/>
+    <circle cx="694" cy="264" r="24"/>
+    <circle cx="209" cy="507" r="27"/>
+  </g>
+  <g fill="#f3eee4">
+    <circle cx="450" cy="240" r="8"/>
+    <circle cx="301" cy="355" r="6"/>
+    <circle cx="576" cy="438" r="7"/>
+    <circle cx="694" cy="264" r="5"/>
+    <circle cx="209" cy="507" r="5"/>
+  </g>
+  <g fill="none" stroke="#df6740" stroke-opacity=".85">
+    <path d="M450 288v62M450 240l-149 115M450 240l126 198M301 355l-92 152"/>
+  </g>
+  <text x="55" y="64" fill="#f3eee4" font-family="monospace" font-size="11" letter-spacing="2">HUMAN × MACHINE</text>
+  <text x="55" y="636" fill="#f3eee4" font-family="serif" font-size="33">Keep thinking in the loop.</text>
+  <text x="834" y="636" fill="#df6740" font-family="monospace" font-size="11" text-anchor="end">NODE / 06</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+  <rect width="900" height="700" fill="#f0b07e"/>
+  <circle cx="730" cy="120" r="230" fill="#18352d"/>
+  <path d="M0 600C200 500 360 610 550 520s240-100 350-80V700H0Z" fill="#f3eee4"/>
+  <text x="52" y="72" fill="#18352d" font-family="monospace" font-size="11" letter-spacing="2">FIELD RESEARCH / 02</text>
+  <text x="52" y="211" fill="#18352d" font-family="serif" font-size="100">150</text>
+  <text x="55" y="252" fill="#18352d" font-family="serif" font-size="30">voices.</text>
+  <g fill="none" stroke="#18352d" stroke-width="2">
+    <circle cx="120" cy="420" r="53"/>
+    <circle cx="245" cy="420" r="53"/>
+    <circle cx="370" cy="420" r="53"/>
+    <circle cx="495" cy="420" r="53"/>
+  </g>
+  <g fill="#18352d">
+    <circle cx="120" cy="420" r="12"/>
+    <circle cx="245" cy="420" r="12"/>
+    <circle cx="370" cy="420" r="12"/>
+    <circle cx="495" cy="420" r="12"/>
+  </g>
+  <text x="52" y="550" fill="#18352d" font-family="serif" font-size="43" font-style="italic">Listen. Pattern. Decide.</text>
+  <text x="52" y="645" fill="#4d5650" font-family="monospace" font-size="10" letter-spacing="1">USER INSIGHT / FARMER NEEDS / MARKET SIGNAL</text>
+</svg>

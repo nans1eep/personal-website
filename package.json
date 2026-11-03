@@ -1,0 +1,9 @@
+{
+  "name": "wang-shuoran-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "王铄然的个人网站",
+  "scripts": {
+    "start": "node server.mjs"
+  }
+}

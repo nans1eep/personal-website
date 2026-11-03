@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8f4eb"/>
+      <stop offset="1" stop-color="#ddd5c4"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="700" fill="url(#paper)"/>
+  <path d="M0 83H900M0 620H900M83 0V700M817 0V700" stroke="#18352d" stroke-opacity=".13"/>
+  <text x="55" y="57" fill="#18352d" font-family="monospace" font-size="12" letter-spacing="2">BUDGET / OVERVIEW 2026</text>
+  <circle cx="842" cy="51" r="8" fill="#df6740"/>
+  <text x="55" y="153" fill="#18352d" font-family="serif" font-size="57">Budget</text>
+  <text x="55" y="203" fill="#4d5650" font-family="Arial,sans-serif" font-size="16">活动经费结构 · 预算分析</text>
+  <rect x="55" y="246" width="252" height="117" fill="#18352d"/>
+  <text x="78" y="280" fill="#b8c5be" font-family="monospace" font-size="10" letter-spacing="1">PLANNED</text>
+  <text x="78" y="331" fill="#f3eee4" font-family="serif" font-size="41">¥ 12,840</text>
+  <rect x="326" y="246" width="252" height="117" fill="#df6740"/>
+  <text x="349" y="280" fill="#fff3e8" font-family="monospace" font-size="10" letter-spacing="1">SAVED</text>
+  <text x="349" y="331" fill="#f3eee4" font-family="serif" font-size="41">15%</text>
+  <g transform="translate(55 420)">
+    <text fill="#4d5650" font-family="monospace" font-size="10">EXPENSE BREAKDOWN</text>
+    <path d="M0 172H525" stroke="#18352d" stroke-opacity=".35"/>
+    <rect x="0" y="100" width="52" height="72" fill="#18352d"/>
+    <rect x="82" y="74" width="52" height="98" fill="#9fb0a7"/>
+    <rect x="164" y="123" width="52" height="49" fill="#df6740"/>
+    <rect x="246" y="45" width="52" height="127" fill="#18352d"/>
+    <rect x="328" y="88" width="52" height="84" fill="#9fb0a7"/>
+    <rect x="410" y="30" width="52" height="142" fill="#df6740"/>
+  </g>
+  <g transform="translate(620 422)">
+    <circle cx="100" cy="100" r="92" fill="none" stroke="#18352d" stroke-width="27" stroke-dasharray="250 600" transform="rotate(-90 100 100)"/>
+    <circle cx="100" cy="100" r="92" fill="none" stroke="#df6740" stroke-width="27" stroke-dasharray="90 600" stroke-dashoffset="-250" transform="rotate(-90 100 100)"/>
+    <circle cx="100" cy="100" r="92" fill="none" stroke="#9fb0a7" stroke-width="27" stroke-dasharray="120 600" stroke-dashoffset="-340" transform="rotate(-90 100 100)"/>
+    <text x="100" y="96" fill="#18352d" font-family="serif" font-size="29" text-anchor="middle">100%</text>
+    <text x="100" y="120" fill="#4d5650" font-family="monospace" font-size="8" text-anchor="middle" letter-spacing="1">ALLOCATED</text>
+  </g>
+  <text x="55" y="666" fill="#4d5650" font-family="monospace" font-size="9" letter-spacing="1">BUDGET / COMPARISON / REVIEW</text>
+</svg>

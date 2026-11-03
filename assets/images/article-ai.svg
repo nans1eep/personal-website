@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#18352d"/>
+  <g stroke="#f3eee4" stroke-opacity=".12">
+    <path d="M0 100H1200M0 200H1200M0 300H1200M0 400H1200M0 500H1200M0 600H1200M0 700H1200"/>
+    <path d="M100 0V800M200 0V800M300 0V800M400 0V800M500 0V800M600 0V800M700 0V800M800 0V800M900 0V800M1000 0V800M1100 0V800"/>
+  </g>
+  <circle cx="860" cy="402" r="250" fill="#df6740"/>
+  <circle cx="860" cy="402" r="180" fill="none" stroke="#18352d" stroke-width="2"/>
+  <circle cx="860" cy="402" r="104" fill="#18352d"/>
+  <path d="M810 402h100M860 352v100" stroke="#f3eee4" stroke-width="2"/>
+  <text x="62" y="96" fill="#b4c1ba" font-family="monospace" font-size="13" letter-spacing="3">COLLABORATION / 03</text>
+  <text x="62" y="218" fill="#f3eee4" font-family="serif" font-size="92">AI as a</text>
+  <text x="62" y="310" fill="#f3eee4" font-family="serif" font-size="92" font-style="italic">thinking</text>
+  <text x="62" y="402" fill="#df6740" font-family="serif" font-size="92">partner.</text>
+  <g transform="translate(64 532)">
+    <rect width="370" height="122" fill="#f3eee4"/>
+    <text x="22" y="35" fill="#18352d" font-family="monospace" font-size="10" letter-spacing="1">PROMPT</text>
+    <text x="22" y="68" fill="#18352d" font-family="serif" font-size="24">目标 → 上下文 → 检查</text>
+    <text x="22" y="98" fill="#4d5650" font-family="Arial,sans-serif" font-size="11">A repeatable workflow.</text>
+  </g>
+  <text x="1137" y="745" fill="#b4c1ba" font-family="monospace" font-size="11" text-anchor="end">HUMAN IN THE LOOP</text>
+</svg>

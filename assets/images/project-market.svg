@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d9653f"/>
+      <stop offset="1" stop-color="#f0aa77"/>
+    </linearGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#18352d" stroke-opacity=".12" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#grid)"/>
+  <circle cx="1010" cy="130" r="260" fill="#18352d"/>
+  <circle cx="1010" cy="130" r="195" fill="none" stroke="#f3eee4" stroke-opacity=".4"/>
+  <circle cx="1010" cy="130" r="125" fill="none" stroke="#f3eee4" stroke-opacity=".25"/>
+  <text x="70" y="105" fill="#18352d" font-family="Arial,sans-serif" font-size="18" letter-spacing="4">FIELD NOTES / 01</text>
+  <text x="70" y="197" fill="#18352d" font-family="serif" font-size="72">LOCAL</text>
+  <text x="70" y="275" fill="#f3eee4" font-family="serif" font-size="88" font-style="italic">exchange</text>
+  <path d="M0 615C180 530 300 560 430 655S760 760 1200 595V800H0Z" fill="#18352d"/>
+  <rect x="72" y="345" width="450" height="176" fill="#f3eee4"/>
+  <text x="100" y="390" fill="#18352d" font-family="monospace" font-size="14" letter-spacing="2">MARKET SIGNAL</text>
+  <text x="100" y="462" fill="#d9653f" font-family="serif" font-size="66">3 : 1</text>
+  <text x="100" y="495" fill="#4d5650" font-family="Arial,sans-serif" font-size="13">农户 · 消费者 · 平台价值</text>
+  <g fill="none" stroke="#f3eee4" stroke-width="2" opacity=".9">
+    <circle cx="784" cy="584" r="53"/>
+    <circle cx="784" cy="584" r="24" fill="#d9653f" stroke="none"/>
+    <path d="M837 584h110M784 637v85"/>
+  </g>
+  <g fill="#f3eee4">
+    <circle cx="784" cy="584" r="5"/>
+    <circle cx="947" cy="584" r="5"/>
+    <circle cx="784" cy="722" r="5"/>
+  </g>
+  <text x="70" y="745" fill="#f3eee4" font-family="monospace" font-size="13" letter-spacing="2">COST / PRICE / DEMAND</text>
+</svg>
