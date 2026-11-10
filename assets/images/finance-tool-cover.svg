@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="tool-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3eee4"/>
+      <stop offset="1" stop-color="#ddd3c1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#tool-bg)"/>
+  <path d="M0 78H1200M0 622H1200" stroke="#18352d" stroke-opacity=".15"/>
+  <text x="55" y="51" fill="#18352d" font-family="monospace" font-size="12" letter-spacing="2">FINANCE DATA TOOL / LIVE</text>
+  <circle cx="1144" cy="45" r="8" fill="#df6740"/>
+  <rect x="55" y="105" width="690" height="410" fill="#faf7f0" stroke="#18352d" stroke-opacity=".18"/>
+  <text x="82" y="145" fill="#4d5650" font-family="monospace" font-size="10" letter-spacing="1">MONTHLY FLOW</text>
+  <g transform="translate(82 185)">
+    <path d="M0 265H620" stroke="#18352d" stroke-opacity=".25"/>
+    <path d="M0 207H620M0 149H620M0 91H620M0 33H620" stroke="#18352d" stroke-opacity=".08"/>
+    <rect x="25" y="138" width="38" height="127" fill="#18352d"/>
+    <rect x="74" y="214" width="38" height="51" fill="#df6740"/>
+    <rect x="185" y="78" width="38" height="187" fill="#18352d"/>
+    <rect x="234" y="174" width="38" height="91" fill="#df6740"/>
+    <rect x="345" y="112" width="38" height="153" fill="#18352d"/>
+    <rect x="394" y="160" width="38" height="105" fill="#df6740"/>
+    <rect x="505" y="53" width="38" height="212" fill="#18352d"/>
+    <rect x="554" y="193" width="38" height="72" fill="#df6740"/>
+  </g>
+  <rect x="780" y="105" width="365" height="410" fill="#18352d"/>
+  <text x="815" y="150" fill="#b9c6c0" font-family="monospace" font-size="10" letter-spacing="1">DATA QUALITY</text>
+  <text x="815" y="255" fill="#f3eee4" font-family="serif" font-size="90">96%</text>
+  <text x="815" y="292" fill="#b9c6c0" font-family="Arial,sans-serif" font-size="13">可分析记录占比</text>
+  <rect x="815" y="336" width="295" height="1" fill="#f3eee4" opacity=".2"/>
+  <text x="815" y="378" fill="#df6740" font-family="monospace" font-size="10">CLEAN / CHECK / ANALYZE</text>
+  <text x="815" y="430" fill="#f3eee4" font-family="serif" font-size="31" font-style="italic">Turn rows</text>
+  <text x="815" y="465" fill="#f3eee4" font-family="serif" font-size="31" font-style="italic">into decisions.</text>
+  <text x="55" y="665" fill="#18352d" font-family="monospace" font-size="10" letter-spacing="1">CSV / LOCAL PROCESSING / CASH FLOW / EXPORT</text>
+</svg>

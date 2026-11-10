@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="王铄然的财务流水清洗与经营分析工具，支持CSV导入、数据校验、趋势分析和结果导出。">
+    <meta name="author" content="王铄然">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#18352d">
+    <meta property="og:title" content="财务流水清洗与经营分析工具｜王铄然">
+    <meta property="og:description" content="在浏览器本地清洗财务流水、识别异常并生成经营分析。">
+    <meta property="og:type" content="website">
+    <title>财务流水清洗与经营分析工具｜王铄然</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="finance-tool.css">
+    <script src="script.js" defer></script>
+    <script src="finance-tool.js" defer></script>
+  </head>
+  <body data-page="finance-tool">
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="index.html" aria-label="王铄然个人网站首页">
+          <span class="brand-mark" aria-hidden="true">WS</span><span class="brand-name">王铄然</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          <span class="sr-only">打开导航菜单</span><span></span><span></span>
+        </button>
+        <nav class="primary-nav" id="primary-nav" aria-label="主导航">
+          <a href="index.html">首页</a>
+          <a href="articles.html">文章</a>
+          <a href="projects.html">作品</a>
+          <a href="finance-tool.html" class="is-active" aria-current="page">工具</a>
+          <a href="about.html">个人简介</a>
+          <a href="index.html#resume">简历</a>
+          <a class="nav-contact" href="mailto:1499949277@qq.com">联系我 <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="tool-hero section-shell">
+        <div class="tool-hero-copy reveal">
+          <p class="eyebrow">LOCAL TOOL / FINANCE DATA</p>
+          <h1>把杂乱的流水，<br>整理成<span class="text-accent">看得懂的经营信息。</span></h1>
+          <p>导入 CSV 财务流水，自动清洗日期、金额与收支类型，识别异常和重复记录，并生成可追溯的经营分析。</p>
+          <div class="tool-badges">
+            <span>数据仅在本地处理</span>
+            <span>无需登录</span>
+            <span>支持中文 CSV</span>
+          </div>
+        </div>
+        <div class="tool-hero-note reveal" aria-hidden="true">
+          <span>01</span>
+          <strong>UPLOAD</strong>
+          <strong>CHECK</strong>
+          <strong>ANALYZE</strong>
+          <strong>EXPORT</strong>
+        </div>
+      </section>
+
+      <section class="tool-workspace section-shell" aria-labelledby="tool-title">
+        <div class="tool-section-heading reveal">
+          <div>
+            <p class="eyebrow">WORKSPACE</p>
+            <h2 id="tool-title">财务数据工作台</h2>
+          </div>
+          <p>文件读取和计算完全在当前浏览器内完成，不会上传到服务器。</p>
+        </div>
+
+        <div class="tool-import-panel reveal" id="tool-import-panel">
+          <label class="drop-zone" id="drop-zone">
+            <input id="csv-file" type="file" accept=".csv,text/csv,text/plain">
+            <span class="drop-zone-icon" aria-hidden="true">＋</span>
+            <strong>选择或拖入 CSV 文件</strong>
+            <span>支持逗号、制表符或分号分隔，自动识别 UTF-8 与 GBK 编码</span>
+          </label>
+          <div class="tool-import-actions">
+            <button class="tool-button tool-button-secondary" id="load-demo" type="button">载入体验数据</button>
+            <button class="tool-button tool-button-secondary" id="download-template" type="button">下载 CSV 模板</button>
+          </div>
+        </div>
+
+        <p class="tool-status" id="tool-status" role="status" aria-live="polite"></p>
+
+        <section class="mapping-panel" id="mapping-panel" aria-labelledby="mapping-title" hidden>
+          <div class="tool-panel-heading">
+            <div>
+              <p class="eyebrow">COLUMN MAPPING</p>
+              <h3 id="mapping-title">确认字段对应关系</h3>
+            </div>
+            <button class="tool-button" id="apply-mapping" type="button">重新分析</button>
+          </div>
+          <p class="mapping-help">系统已尝试自动识别。金额列与“收入/支出列”二选一即可；若同时使用金额与收支类型，软件会据此判断收入或支出。</p>
+          <div class="mapping-grid">
+            <label class="tool-field">
+              <span>日期字段 *</span>
+              <select data-map="date"></select>
+            </label>
+            <label class="tool-field">
+              <span>摘要字段</span>
+              <select data-map="description"></select>
+            </label>
+            <label class="tool-field">
+              <span>分类字段</span>
+              <select data-map="category"></select>
+            </label>
+            <label class="tool-field">
+              <span>账户字段</span>
+              <select data-map="account"></select>
+            </label>
+            <label class="tool-field">
+              <span>金额字段</span>
+              <select data-map="amount"></select>
+            </label>
+            <label class="tool-field">
+              <span>收支类型字段</span>
+              <select data-map="direction"></select>
+            </label>
+            <label class="tool-field">
+              <span>收入 / 贷方字段</span>
+              <select data-map="income"></select>
+            </label>
+            <label class="tool-field">
+              <span>支出 / 借方字段</span>
+              <select data-map="expense"></select>
+            </label>
+          </div>
+        </section>
+
+        <section class="tool-results" id="tool-results" aria-labelledby="results-title" hidden>
+          <div class="quality-strip" aria-label="数据质量概览">
+            <div><span>读取记录</span><strong id="stat-total">0</strong></div>
+            <div><span>可分析</span><strong id="stat-valid">0</strong></div>
+            <div><span>疑似重复</span><strong id="stat-duplicate">0</strong></div>
+            <div><span>异常记录</span><strong id="stat-error">0</strong></div>
+          </div>
+
+          <div class="tool-filter-bar">
+            <label class="tool-field">
+              <span>开始日期</span>
+              <input id="filter-start" type="date">
+            </label>
+            <label class="tool-field">
+              <span>结束日期</span>
+              <input id="filter-end" type="date">
+            </label>
+            <label class="tool-field tool-search-field">
+              <span>搜索摘要、分类或账户</span>
+              <input id="filter-search" type="search" placeholder="输入关键词">
+            </label>
+            <label class="tool-check">
+              <input id="exclude-duplicates" type="checkbox" checked>
+              <span>排除疑似重复</span>
+            </label>
+            <label class="tool-check">
+              <input id="only-errors" type="checkbox">
+              <span>只看异常</span>
+            </label>
+            <button class="tool-button tool-button-secondary" id="reset-filters" type="button">重置筛选</button>
+          </div>
+
+          <div class="kpi-grid">
+            <article class="kpi-card">
+              <span>总收入</span>
+              <strong id="kpi-income">¥0.00</strong>
+              <small id="kpi-income-count">0 笔收入</small>
+            </article>
+            <article class="kpi-card">
+              <span>总支出</span>
+              <strong id="kpi-expense">¥0.00</strong>
+              <small id="kpi-expense-count">0 笔支出</small>
+            </article>
+            <article class="kpi-card kpi-card-dark">
+              <span>净现金流</span>
+              <strong id="kpi-net">¥0.00</strong>
+              <small id="kpi-margin">收支持平</small>
+            </article>
+            <article class="kpi-card">
+              <span>平均单笔金额</span>
+              <strong id="kpi-average">¥0.00</strong>
+              <small id="kpi-date-range">暂无日期范围</small>
+            </article>
+          </div>
+
+          <div class="chart-grid">
+            <article class="chart-card">
+              <div class="chart-heading">
+                <div><span>MONTHLY FLOW</span><h3>月度收支趋势</h3></div>
+                <div class="chart-legend"><span class="legend-income">收入</span><span class="legend-expense">支出</span></div>
+              </div>
+              <div class="chart-canvas" id="monthly-chart"></div>
+            </article>
+            <article class="chart-card">
+              <div class="chart-heading">
+                <div><span>EXPENSE MIX</span><h3>支出分类</h3></div>
+              </div>
+              <div class="category-chart" id="category-chart"></div>
+            </article>
+          </div>
+
+          <section class="data-table-panel">
+            <div class="tool-panel-heading">
+              <div>
+                <p class="eyebrow">CLEANED DATA</p>
+                <h3 id="results-title">清洗后的流水</h3>
+              </div>
+              <div class="export-actions">
+                <button class="tool-button tool-button-secondary" id="export-summary" type="button">导出分析汇总</button>
+                <button class="tool-button" id="export-clean" type="button">导出清洗结果</button>
+              </div>
+            </div>
+            <p class="table-note" id="table-note"></p>
+            <div class="finance-table-wrap">
+              <table class="finance-table">
+                <thead>
+                  <tr>
+                    <th>状态</th>
+                    <th>日期</th>
+                    <th>摘要</th>
+                    <th>分类</th>
+                    <th>账户</th>
+                    <th class="number-cell">收入</th>
+                    <th class="number-cell">支出</th>
+                    <th class="number-cell">净额</th>
+                  </tr>
+                </thead>
+                <tbody id="finance-table-body"></tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+      </section>
+
+      <section class="tool-method section-shell">
+        <div class="tool-method-intro reveal">
+          <p class="eyebrow">HOW IT WORKS / 04</p>
+          <h2>从原始流水<br>到可用结果。</h2>
+        </div>
+        <div class="tool-method-list">
+          <article class="reveal"><span>01</span><h3>字段识别</h3><p>根据常见中文字段名自动匹配日期、摘要、金额和分类，也可以手动调整。</p></article>
+          <article class="reveal"><span>02</span><h3>清洗校验</h3><p>统一日期格式、解析货币金额、识别收入与支出，标记缺失值、零金额和疑似重复。</p></article>
+          <article class="reveal"><span>03</span><h3>经营分析</h3><p>计算总收入、总支出、净现金流，并按月份和支出分类生成可直接阅读的图表。</p></article>
+          <article class="reveal"><span>04</span><h3>结果导出</h3><p>保留原始记录编号与处理状态，导出清洗数据和分析汇总，方便复查与二次处理。</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-grid">
+        <div>
+          <a class="brand brand-footer" href="index.html"><span class="brand-mark">WS</span><span>王铄然</span></a>
+          <p>在数据、财务与业务的交汇处，持续学习。</p>
+        </div>
+        <nav aria-label="页脚导航">
+          <a href="articles.html">文章</a><a href="projects.html">作品</a><a href="finance-tool.html">数据工具</a><a href="about.html">个人简介</a><a href="index.html#resume">简历</a><a href="mailto:1499949277@qq.com">邮件</a>
+        </nav>
+      </div>
+      <div class="section-shell footer-bottom">
+        <span>© <span data-current-year>2026</span> 王铄然</span>
+        <span>Designed with clarity, built with care.</span>
+      </div>
+    </footer>
+  </body>
+</html>
