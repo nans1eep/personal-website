@@ -64,9 +64,10 @@ http://localhost:4173/editor.html
 
 1. 注册或登录 GitHub，新建一个公开仓库。
 2. 把本目录中的网站文件上传到仓库根目录，不需要上传 `work/` 和 `outputs/`。
-3. 打开仓库的 `Settings → Pages`。
-4. 在 `Build and deployment` 中选择 `Deploy from a branch`，分支选择 `main`，目录选择 `/ (root)`，保存。
-5. 等待 GitHub 完成部署，网站地址通常为 `https://你的用户名.github.io/仓库名/`。
+3. 首次上传到 `main` 分支后，仓库中的 `.github/workflows/deploy-pages.yml` 会自动部署网站。
+4. 如果 Pages 尚未自动开启，打开 `Settings → Pages`，在 Source 中选择 `GitHub Actions`。
+5. 在仓库的 `Actions` 页面等待部署任务变为成功。
+6. 网站地址通常为 `https://你的用户名.github.io/仓库名/`。
 
 ### Netlify（可拖拽发布）
 
