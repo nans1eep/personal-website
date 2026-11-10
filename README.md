@@ -2,6 +2,10 @@
 
 这是一个无需安装前端框架的静态个人网站，使用原生 HTML、CSS 和 JavaScript 构建。第一版包含首页、文章列表、文章详情、作品和关于页面，并适配电脑、平板与手机。
 
+## 在线网站
+
+https://nans1eep.github.io/personal-website/
+
 ## 本地启动
 
 需要先安装 [Node.js](https://nodejs.org/)（建议安装 LTS 版本）。
