@@ -42,7 +42,7 @@ http://localhost:4173
 | `editor.html` | 文章写作、封面和文稿导入页面 |
 | `editor.js` | 本地草稿保存、文章预览和数据导出 |
 | `assets/images/` | 封面、插画与图标 |
-| `assets/documents/` | 数据运营版与销售工程师版简历 |
+| `assets/documents/` | 数据运营版与销售运营版简历 |
 | `server.mjs` | 无第三方依赖的本地预览服务器 |
 
 ## 求职定位与简历
@@ -50,7 +50,7 @@ http://localhost:4173
 网站主投方向为数据运营、业务运营、经营分析和财务数据岗位，销售运营、商务运营与客户成功作为第二方向。
 
 - 数据运营与财务数据版：`assets/documents/王铄然-简历-大数据运营分析.docx`
-- 销售工程师版：`assets/documents/王铄然-简历-销售工程师.docx`
+- 销售与商务运营版：`assets/documents/王铄然-简历-销售与商务运营.docx`
 
 首页和文章、作品、个人简介页面均提供简历下载入口。
 
