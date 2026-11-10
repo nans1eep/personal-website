@@ -1,6 +1,7 @@
 # Local preview and QA artifacts
 work/
 outputs/
+standalone-tools/
 
 # OS / editor files
 .DS_Store
