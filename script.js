@@ -119,37 +119,6 @@
     }
   }
 
-  const homeArticleCards = document.querySelectorAll("[data-home-article-slot]");
-
-  if (homeArticleCards.length) {
-    const latestArticles = Object.entries(window.siteArticles || {})
-      .filter(([, article]) => article && article.title)
-      .sort(([, first], [, second]) => {
-        return new Date(second.datetime || 0) - new Date(first.datetime || 0);
-      });
-
-    homeArticleCards.forEach((card, index) => {
-      const entry = latestArticles[index];
-      if (!entry) {
-        card.hidden = true;
-        return;
-      }
-
-      const [id, article] = entry;
-      const cover = card.querySelector("[data-home-article-cover]");
-      const kicker = card.querySelector("[data-home-article-kicker]");
-      const title = card.querySelector("[data-home-article-title]");
-
-      card.href = `article.html?post=${encodeURIComponent(id)}`;
-      if (cover) {
-        cover.src = article.cover || "assets/images/article-numbers.svg";
-        cover.alt = `${article.title}文章封面`;
-      }
-      if (kicker) kicker.textContent = `${article.category} · ${article.date}`;
-      if (title) title.textContent = article.title;
-    });
-  }
-
   const revealItems = document.querySelectorAll(".reveal");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -265,13 +234,13 @@
         ["分析重点", "关注预算结构、支出偏差与机动资金，让不同方案之间具备更清晰的比较依据。"]
       ]
     },
-    ai: {
-      kicker: "03 / AI WORKFLOW",
-      title: "个人研究与整理助手",
+    business: {
+      kicker: "03 / BUSINESS PRACTICE",
+      title: "校园摆摊调酒经营",
       sections: [
-        ["项目问题", "资料分散、重复整理耗时，AI 的回答也容易出现事实偏差，需要一套可检查的协作流程。"],
-        ["我的工作", "把任务拆成资料收集、信息提炼、交叉核验和表达优化，并通过提示词模板记录可复用的上下文。"],
-        ["当前阶段", "仍处于个人学习和小范围试用阶段，公开页只展示方法，不虚构效率提升比例或商业成果。"]
+        ["经营背景", "参与校园场景中的摆摊调酒经营，需要同时处理采购、成本、销售安排和客户反馈。"],
+        ["我的工作", "负责材料采购与成本规划，安排销售路线，与客户沟通并进行购买后回访，根据反馈调整经营安排。"],
+        ["经营结果", "项目实现盈利 3000 余元，并积累了复购客户，验证了成本控制、沟通和持续跟进对经营结果的作用。"]
       ]
     }
   };

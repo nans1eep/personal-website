@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+  <defs>
+    <linearGradient id="business-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0b07e"/>
+      <stop offset="1" stop-color="#d9653f"/>
+    </linearGradient>
+    <pattern id="business-grid" width="45" height="45" patternUnits="userSpaceOnUse">
+      <path d="M45 0H0V45" fill="none" stroke="#18352d" stroke-opacity=".12"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="700" fill="url(#business-bg)"/>
+  <rect width="900" height="700" fill="url(#business-grid)"/>
+  <circle cx="738" cy="124" r="210" fill="#18352d"/>
+  <circle cx="738" cy="124" r="142" fill="none" stroke="#f3eee4" stroke-opacity=".35"/>
+  <text x="52" y="70" fill="#18352d" font-family="monospace" font-size="12" letter-spacing="2">BUSINESS PRACTICE / 02</text>
+  <text x="52" y="151" fill="#18352d" font-family="serif" font-size="63">BUY.</text>
+  <text x="52" y="212" fill="#f3eee4" font-family="serif" font-size="63" font-style="italic">Price.</text>
+  <text x="52" y="273" fill="#18352d" font-family="serif" font-size="63">Sell.</text>
+  <g transform="translate(52 330)">
+    <rect width="420" height="268" fill="#f8f4eb"/>
+    <text x="25" y="38" fill="#18352d" font-family="monospace" font-size="10" letter-spacing="1">OPERATING SNAPSHOT</text>
+    <path d="M25 59H395" stroke="#18352d" stroke-opacity=".2"/>
+    <text x="25" y="112" fill="#4d5650" font-family="Arial,sans-serif" font-size="13">经营利润</text>
+    <text x="25" y="160" fill="#d9653f" font-family="serif" font-size="48">¥3,000+</text>
+    <text x="25" y="204" fill="#4d5650" font-family="Arial,sans-serif" font-size="13">采购 · 成本规划 · 销售安排</text>
+    <rect x="25" y="228" width="90" height="8" fill="#18352d"/>
+    <rect x="125" y="228" width="145" height="8" fill="#d9653f"/>
+    <rect x="280" y="228" width="63" height="8" fill="#9fb0a7"/>
+  </g>
+  <g transform="translate(540 334)">
+    <path d="M55 13H205L163 83V181H97V83Z" fill="#f3eee4" stroke="#18352d" stroke-width="3"/>
+    <path d="M54 13L186 13" stroke="#d9653f" stroke-width="8"/>
+    <path d="M163 181H97" stroke="#18352d" stroke-width="6"/>
+    <path d="M99 73H163" stroke="#d9653f" stroke-width="3"/>
+    <circle cx="162" cy="34" r="13" fill="#bad274"/>
+    <text x="0" y="242" fill="#f3eee4" font-family="serif" font-size="28" font-style="italic">Listen and adjust.</text>
+  </g>
+  <text x="52" y="652" fill="#f3eee4" font-family="monospace" font-size="10" letter-spacing="1">CUSTOMER FEEDBACK / COST CONTROL / REPEAT PURCHASE</text>
+</svg>
