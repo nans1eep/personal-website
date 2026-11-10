@@ -1580,6 +1580,7 @@ h3 {
   width: min(720px, calc(100vw - 36px));
   max-height: min(760px, calc(100vh - 40px));
   padding: 0;
+  overflow-y: auto;
   color: var(--ink);
   background: var(--paper-light);
   border: 0;
@@ -1610,6 +1611,23 @@ h3 {
 .dialog-content p {
   color: var(--ink-soft);
   font-size: 14px;
+}
+
+.dialog-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.dialog-tags span {
+  padding: 5px 9px;
+  color: var(--forest);
+  background: var(--paper);
+  font-size: 9px;
+  font-weight: 600;
 }
 
 .dialog-close {
