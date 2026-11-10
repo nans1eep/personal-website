@@ -119,6 +119,37 @@
     }
   }
 
+  const homeArticleCards = document.querySelectorAll("[data-home-article-slot]");
+
+  if (homeArticleCards.length) {
+    const latestArticles = Object.entries(window.siteArticles || {})
+      .filter(([, article]) => article && article.title)
+      .sort(([, first], [, second]) => {
+        return new Date(second.datetime || 0) - new Date(first.datetime || 0);
+      });
+
+    homeArticleCards.forEach((card, index) => {
+      const entry = latestArticles[index];
+      if (!entry) {
+        card.hidden = true;
+        return;
+      }
+
+      const [id, article] = entry;
+      const cover = card.querySelector("[data-home-article-cover]");
+      const kicker = card.querySelector("[data-home-article-kicker]");
+      const title = card.querySelector("[data-home-article-title]");
+
+      card.href = `article.html?post=${encodeURIComponent(id)}`;
+      if (cover) {
+        cover.src = article.cover || "assets/images/article-numbers.svg";
+        cover.alt = `${article.title}文章封面`;
+      }
+      if (kicker) kicker.textContent = `${article.category} · ${article.date}`;
+      if (title) title.textContent = article.title;
+    });
+  }
+
   const revealItems = document.querySelectorAll(".reveal");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -175,6 +206,10 @@
       document.title = `${post.title}｜王铄然`;
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) metaDescription.setAttribute("content", post.deck);
+      const openGraphTitle = document.querySelector('meta[property="og:title"]');
+      const openGraphDescription = document.querySelector('meta[property="og:description"]');
+      if (openGraphTitle) openGraphTitle.setAttribute("content", post.title);
+      if (openGraphDescription) openGraphDescription.setAttribute("content", post.deck);
 
       articleRoot.innerHTML = `
         <header class="article-hero">

@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="王铄然的个人网站，关注财务管理、数据分析与 AI 工作流。">
+    <meta name="author" content="王铄然">
+    <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#18352d">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="王铄然｜财务 · 数据 · AI">
+    <meta property="og:description" content="财务管理、数据分析与 AI 工作流的个人作品与文章。">
+    <meta name="twitter:card" content="summary">
     <title>王铄然｜财务 · 数据 · AI</title>
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "王铄然",
+        "description": "财务管理专业毕业生，关注数据分析与 AI 工作流。",
+        "email": "mailto:1499949277@qq.com",
+        "knowsAbout": ["财务管理", "数据分析", "AI 工作流", "Python"]
+      }
+    </script>
+    <script src="articles-data.js" defer></script>
     <script src="script.js" defer></script>
   </head>
   <body data-page="home">
@@ -51,7 +70,7 @@
           <div class="hero-card">
             <div class="hero-card-top">
               <span>PROFILE / 001</span>
-              <span class="status-dot">AVAILABLE TO LEARN</span>
+              <span class="status-dot">OPEN TO OPPORTUNITIES</span>
             </div>
             <div class="orbit" aria-hidden="true">
               <div class="orbit-ring orbit-ring-one"></div>
@@ -114,26 +133,26 @@
             </div>
           </a>
 
-          <a class="feature-card reveal" href="article.html?post=budget">
+          <a class="feature-card reveal" href="articles.html" data-home-article-slot="0">
             <figure class="feature-media feature-media-small">
-              <img src="assets/images/article-budget.svg" alt="校园活动预算文章封面" width="900" height="700">
+              <img src="assets/images/article-budget.svg" alt="文章封面" width="900" height="700" loading="lazy" decoding="async" data-home-article-cover>
               <span class="card-index">02</span>
             </figure>
             <div class="feature-body">
-              <p class="card-kicker">财务实践 · 2026.03.12</p>
-              <h3>一份预算表，如何变成活动决策工具？</h3>
+              <p class="card-kicker" data-home-article-kicker>财务实践 · 2026.03.12</p>
+              <h3 data-home-article-title>一份预算表，如何变成活动决策工具？</h3>
               <span class="card-arrow" aria-hidden="true">↗</span>
             </div>
           </a>
 
-          <a class="feature-card reveal" href="article.html?post=ai-workflow">
+          <a class="feature-card reveal" href="articles.html" data-home-article-slot="1">
             <figure class="feature-media feature-media-small">
-              <img src="assets/images/article-ai.svg" alt="AI 工作流文章封面" width="900" height="700">
+              <img src="assets/images/article-ai.svg" alt="文章封面" width="900" height="700" loading="lazy" decoding="async" data-home-article-cover>
               <span class="card-index">03</span>
             </figure>
             <div class="feature-body">
-              <p class="card-kicker">AI 应用 · 2026.02.18</p>
-              <h3>让 AI 成为搭档，而不是答案机器</h3>
+              <p class="card-kicker" data-home-article-kicker>AI 应用 · 2026.02.18</p>
+              <h3 data-home-article-title>让 AI 成为搭档，而不是答案机器</h3>
               <span class="card-arrow" aria-hidden="true">↗</span>
             </div>
           </a>

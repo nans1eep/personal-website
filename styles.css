@@ -2001,6 +2001,38 @@ h3 {
   font-size: 11px;
 }
 
+/* Not found */
+.not-found {
+  min-height: calc(100vh - 240px);
+  padding-block: clamp(90px, 12vw, 170px);
+}
+
+.not-found-code {
+  display: block;
+  margin-bottom: 15px;
+  color: var(--orange);
+  font-family: var(--mono);
+  font-size: clamp(80px, 18vw, 220px);
+  font-weight: 700;
+  letter-spacing: -0.09em;
+  line-height: 0.8;
+  opacity: 0.22;
+}
+
+.not-found h1 {
+  font-size: clamp(46px, 7vw, 88px);
+}
+
+.not-found > p:not(.eyebrow) {
+  max-width: 560px;
+  margin-top: 25px;
+  color: var(--ink-soft);
+}
+
+.not-found .hero-actions {
+  margin-top: 35px;
+}
+
 /* Motion and focus */
 .reveal {
   opacity: 0;
