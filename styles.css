@@ -828,15 +828,11 @@ h3 {
 }
 
 .resume-heading {
-  display: grid;
-  grid-template-columns: 1fr 0.72fr;
-  column-gap: 60px;
-  align-items: end;
   margin-bottom: 45px;
 }
 
 .resume-heading .eyebrow {
-  grid-column: 1 / -1;
+  margin-bottom: 14px;
 }
 
 .resume-heading h2 {
