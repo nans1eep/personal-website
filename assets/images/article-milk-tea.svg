@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="tea-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e7dfd0"/>
+      <stop offset="1" stop-color="#cfc4ae"/>
+    </linearGradient>
+    <pattern id="tea-grid" width="46" height="46" patternUnits="userSpaceOnUse">
+      <path d="M46 0H0V46" fill="none" stroke="#18352d" stroke-opacity=".1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#tea-bg)"/>
+  <rect width="1200" height="800" fill="url(#tea-grid)"/>
+  <circle cx="1010" cy="160" r="250" fill="#df6740"/>
+  <circle cx="1010" cy="160" r="166" fill="none" stroke="#f3eee4" stroke-opacity=".45"/>
+  <text x="66" y="92" fill="#18352d" font-family="monospace" font-size="15" letter-spacing="3">PROFIT TABLE / 01</text>
+  <text x="66" y="230" fill="#18352d" font-family="serif" font-size="92">SALES UP.</text>
+  <text x="66" y="323" fill="#18352d" font-family="serif" font-size="92" font-style="italic">MARGIN DOWN.</text>
+  <path d="M65 561H723" stroke="#18352d" stroke-opacity=".4" stroke-width="2"/>
+  <path d="M65 494H435M65 427H435" stroke="#18352d" stroke-opacity=".17"/>
+  <rect x="65" y="453" width="52" height="108" fill="#18352d"/>
+  <rect x="147" y="397" width="52" height="164" fill="#df6740"/>
+  <rect x="229" y="424" width="52" height="137" fill="#9fb0a7"/>
+  <rect x="311" y="350" width="52" height="211" fill="#18352d"/>
+  <text x="65" y="620" fill="#18352d" font-family="monospace" font-size="11" letter-spacing="2">REVENUE +20%</text>
+  <text x="270" y="620" fill="#18352d" font-family="monospace" font-size="11" letter-spacing="2">PROFIT +10%</text>
+  <g transform="translate(790 390)">
+    <path d="M36 0H214L180 250H70Z" fill="#f3eee4" stroke="#18352d" stroke-width="3"/>
+    <path d="M35 0H215" stroke="#18352d" stroke-width="15"/>
+    <path d="M71 250H179" stroke="#18352d" stroke-width="7"/>
+    <circle cx="126" cy="83" r="31" fill="#df6740"/>
+    <circle cx="83" cy="148" r="18" fill="#9fb0a7"/>
+    <circle cx="160" cy="165" r="14" fill="#18352d"/>
+    <path d="M208 30L258 53" stroke="#f3eee4" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <text x="65" y="725" fill="#4d5650" font-family="serif" font-size="31">Why did profit grow slower than revenue?</text>
+</svg>
